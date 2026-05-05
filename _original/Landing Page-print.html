@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Amaral & Bohrer Advogados — Recupere sua conta no Mercado Livre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+
+<style>
+  @page { size: A4; margin: 12mm; }
+  html, body {
+    background: white !important;
+  }
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  /* Force all backgrounds/colors to print */
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  /* Disable interactive UI for print */
+  .tweaks-panel, [data-tweaks-panel] { display: none !important; }
+  .video-poster .video-play, .video-poster .video-label { display: none !important; }
+  .cta { box-shadow: none !important; }
+  /* Make sure each major section is kept together when possible */
+  section { break-inside: avoid; }
+  .reason-grid, .why-grid, .test-grid, .steps-grid, .orange-list, .form-grid, .lawyer-card {
+    break-inside: avoid;
+  }
+  .reason-card, .why-card, .test-card, .step-card, .orange-item, .faq-item {
+    break-inside: avoid;
+  }
+  /* Avoid orphan headings */
+  h1, h2, h3 { break-after: avoid; }
+  /* Hero is large; allow break after */
+  .hero { break-after: auto; }
+  /* Reduce big paddings to fit nicely on paper */
+  .section { padding: 36px 0 !important; }
+  .hero-grid { padding: 28px 0 56px !important; }
+  .orange-band { padding: 48px 0 !important; }
+  /* Iframe video — show poster only when printing */
+  .video-wrap iframe { display: none !important; }
+  .video-wrap { background: #111 !important; }
+  /* Form is interactive; hide form-card content but keep info */
+  .form-card form, .form-card .form-success { display: none !important; }
+  .form-card::after {
+    content: "Acesse o site para preencher o formulário de contato.";
+    display: block;
+    text-align: center;
+    color: #5a6b6b;
+    font-size: 14px;
+    padding: 30px 10px;
+  }
+  /* Avoid hover-related transforms */
+  .reason-card:hover, .why-card:hover, .step-card:hover, .orange-item:hover { transform: none !important; box-shadow: none !important; }
+  /* Footer */
+  footer.site { padding: 28px 0 18px !important; }
+</style>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script>
+const TWEAK_DEFAULTS = {
+  "headlineVariant": "urgent",
+  "ctaVariant": "original",
+  "subheadVariant": "urgent"
+};
+window.TWEAK_DEFAULTS = TWEAK_DEFAULTS;
+window.__PRINT_MODE = true;
+</script>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="components/Icons.jsx"></script>
+<script type="text/babel" src="components/Hero.jsx"></script>
+<script type="text/babel" src="components/Banner.jsx"></script>
+<script type="text/babel" src="components/Reasons.jsx"></script>
+<script type="text/babel" src="components/Recover.jsx"></script>
+<script type="text/babel" src="components/Lawyer.jsx"></script>
+<script type="text/babel" src="components/WhyUs.jsx"></script>
+<script type="text/babel" src="components/Testimonials.jsx"></script>
+<script type="text/babel" src="components/FAQ.jsx"></script>
+<script type="text/babel" src="components/Form.jsx"></script>
+<script type="text/babel" src="components/Footer.jsx"></script>
+<script type="text/babel" src="app.jsx"></script>
+
+<script type="text/babel">
+  // Wait for fonts + React render + babel parse, then auto-print
+  (async function () {
+    try { if (document.fonts && document.fonts.ready) await document.fonts.ready; } catch (e) {}
+    // Give React time to mount all components
+    await new Promise(r => setTimeout(r, 800));
+    // Open all FAQ items so they print expanded
+    document.querySelectorAll('.faq-item').forEach(el => el.setAttribute('data-open', 'true'));
+    await new Promise(r => setTimeout(r, 500));
+    window.print();
+  })();
+</script>
+</body>
+</html>
