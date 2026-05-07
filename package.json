@@ -6,7 +6,7 @@
   "description": "Landing page Amaral e Bohrer Advogados - Recuperação de contas no Mercado Livre",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node prerender.mjs",
     "preview": "vite preview --port 4173",
     "tweaks": "TWEAKS=1 vite",
     "build:tweaks": "TWEAKS=1 vite build"
