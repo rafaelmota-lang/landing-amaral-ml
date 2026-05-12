@@ -32,7 +32,7 @@ export function Banner() {
           ))}
         </div>
         <div className="cta-block">
-          <a href="https://app.leadster.com.br/capture/gwesAHX1JB801Qre" target="_blank" rel="noopener" className="cta">Fale com um especialista em Mercado Livre <Icons.Arrow /></a>
+          <a id="lead" href="https://app.leadster.com.br/capture/gwesAHX1JB801Qre" target="_blank" rel="noopener" className="cta">Fale com um especialista em Mercado Livre <Icons.Arrow /></a>
           <StarsRow light />
         </div>
       </div>

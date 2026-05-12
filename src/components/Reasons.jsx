@@ -37,7 +37,7 @@ export function Reasons() {
         </div>
         <p className="pre-cta">Sente que sofreu uma suspensão injusta?</p>
         <div className="cta-block" style={{ marginTop: 0 }}>
-          <a href="https://app.leadster.com.br/capture/gwesAHX1JB801Qre" target="_blank" rel="noopener" className="cta">Converse sobre o seu caso <Icons.Arrow /></a>
+          <a id="lead" href="https://app.leadster.com.br/capture/gwesAHX1JB801Qre" target="_blank" rel="noopener" className="cta">Converse sobre o seu caso <Icons.Arrow /></a>
           <StarsRow />
         </div>
       </div>

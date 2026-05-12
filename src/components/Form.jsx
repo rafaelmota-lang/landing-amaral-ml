@@ -69,6 +69,7 @@ export function ContactForm() {
                   da nossa equipe. Caso não abra automaticamente, clique no botão abaixo.
                 </p>
                 <a
+                  id="lead"
                   href={`https://wa.me/${routedTo?.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -166,7 +167,7 @@ export function ContactForm() {
                     placeholder="Descreva quando aconteceu, qual o motivo informado, valor retido, etc."
                   />
                 </div>
-                <button type="submit" className="cta">
+                <button id="lead" type="submit" className="cta">
                   Enviar e falar no WhatsApp <Icons.Arrow />
                 </button>
                 <p className="privacy">
