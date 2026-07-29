@@ -18,19 +18,19 @@ const TweaksRuntime = TWEAKS_ENABLED
   : null;
 
 const HEADLINES = {
-  original: 'O Mercado Livre suspendeu sua conta? Retome suas vendas com o auxílio de um advogado <span class="accent">especializado em marketplaces</span>.',
-  direct: 'Conta suspensa no <span class="accent">Mercado Livre</span>? Recupere suas vendas com quem entende do assunto.',
-  urgent: 'Sua loja parou. <span class="accent">Seu saldo está retido.</span> Nós sabemos como reverter isso.',
+  original: 'Teve a conta suspensa em um marketplace? Conte com o auxílio de um advogado <span class="accent">especializado em marketplaces</span>.',
+  direct: 'Conta de vendedor suspensa? <span class="accent">Entenda seus direitos</span> com quem é especialista em marketplaces.',
+  urgent: 'Sua loja parou. <span class="accent">Seu saldo está retido.</span> Você pode recorrer judicialmente.',
 };
 const SUBHEADS = {
-  original: 'Somos especialistas em assistência jurídica para vendedores do Mercado Livre: saiba como recorrer se a plataforma suspendeu suas vendas ou está bloqueando o seu saldo.',
-  direct: 'Mais de 13 mil vendedores já recuperaram suas contas com o nosso escritório. Atuamos em todo o Brasil, de forma 100% remota e com avaliação inicial gratuita.',
-  urgent: 'Cada dia parado é prejuízo. Fale agora com um advogado especialista em marketplaces e descubra em minutos como recuperar a sua conta e o seu saldo.',
+  original: 'Escritório de advocacia independente, especializado em assistência jurídica a vendedores de marketplaces como o Mercado Livre: saiba como recorrer se a plataforma suspendeu suas vendas ou bloqueou o seu saldo.',
+  direct: 'Mais de 10 mil clientes já contaram com o nosso escritório. Atuamos em todo o Brasil, de forma 100% remota.',
+  urgent: 'Cada dia parado é prejuízo. Fale agora com um advogado especialista em marketplaces e entenda os caminhos jurídicos para o seu caso.',
 };
 const CTAS = {
-  original: 'Fale com um especialista em Mercado Livre',
-  direct: 'Quero recuperar minha conta agora',
-  urgent: 'Análise gratuita do meu caso',
+  original: 'Fale com um advogado especialista',
+  direct: 'Quero falar sobre o meu caso',
+  urgent: 'Quero entender meus direitos',
 };
 
 const DEFAULTS = (typeof window !== 'undefined' && window.TWEAK_DEFAULTS) || {

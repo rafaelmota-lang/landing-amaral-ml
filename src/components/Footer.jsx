@@ -33,7 +33,7 @@ export function Footer() {
           <span>OAB/CE 36.237</span>
         </div>
         <p className="foot-disclaimer">
-          Este site não faz parte do Google nem do Facebook ou do Facebook Inc. Além disso, não oferecemos nenhum tipo de serviço oficial do governo, NÃO praticamos fraude, não somos uma empresa que vende criptoativos ou qualquer outro serviço.
+          <strong>Este site é de um escritório de advocacia independente e não possui qualquer vínculo, afiliação, patrocínio ou autorização do Mercado Livre (MercadoLibre, Inc.), tampouco de Shopee, Amazon, Magazine Luiza, Google ou Meta.</strong> "Mercado Livre" e demais marcas citadas pertencem aos seus respectivos titulares e são mencionadas apenas para descrever, de forma factual, o serviço jurídico oferecido. Não somos canal oficial de atendimento dessas plataformas e não intermediamos contato com elas. Não oferecemos serviço oficial do governo, não praticamos fraude e não comercializamos criptoativos.
         </p>
       </div>
     </footer>

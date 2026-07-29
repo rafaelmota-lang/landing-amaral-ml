@@ -27,7 +27,7 @@ export function Hero({ headline, subhead, ctaLabel }) {
           <div className="hero-text">
             <div className="pill">
               <span className="dot" aria-hidden="true">!</span>
-              Bloqueio no Mercado Livre? Aja agora
+              Conta de vendedor bloqueada? Aja agora
             </div>
             <h1 dangerouslySetInnerHTML={{ __html: headline }} />
             <p className="lead">{subhead}</p>
@@ -44,7 +44,7 @@ export function Hero({ headline, subhead, ctaLabel }) {
             <div className="badge b1">
               <div className="ic"><Icons.FileLine /></div>
               <div>
-                <div className="v">+13.000</div>
+                <div className="v">+10.000</div>
                 <div className="l">Casos atendidos</div>
               </div>
             </div>
@@ -77,7 +77,7 @@ export function Hero({ headline, subhead, ctaLabel }) {
                     </div>
                   </div>
                   <div className="phone-cta">Falar com especialista</div>
-                  <div className="phone-quote">★★★★★ Mais de 13 mil clientes</div>
+                  <div className="phone-quote">★★★★★ Mais de 10 mil clientes</div>
                 </div>
               </div>
             </div>
