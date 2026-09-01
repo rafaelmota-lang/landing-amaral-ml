@@ -1,6 +1,8 @@
 import { Icons, StarsRow } from './Icons.jsx';
+import { useWhatsAppLink } from '../useWhatsAppLink.js';
 
 export function Banner() {
+  const whatsappLink = useWhatsAppLink();
   const items = [
     {
       icon: <Icons.Contract />,
@@ -32,7 +34,7 @@ export function Banner() {
           ))}
         </div>
         <div className="cta-block">
-          <a id="lead" href="https://app.leadster.com.br/capture/gwesAHX1JB801Qre" target="_blank" rel="noopener" className="cta">Fale com um especialista em Mercado Livre <Icons.Arrow /></a>
+          <a id="lead" href={whatsappLink} target="_blank" rel="noopener" className="cta">Fale com um especialista em Mercado Livre <Icons.Arrow /></a>
           <StarsRow light />
         </div>
       </div>
