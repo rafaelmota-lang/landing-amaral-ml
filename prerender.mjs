@@ -17,6 +17,7 @@ const VARIANTES = [
   { origem: 'site',   dir: ''       },
   { origem: 'google', dir: 'google' },
   { origem: 'meta',   dir: 'meta'   },
+  { origem: 'youtube',dir: 'youtube'},
 ];
 const CANONICAL = 'https://ml.amaralebohrer.com.br/';
 
