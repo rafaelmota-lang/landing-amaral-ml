@@ -16,24 +16,11 @@
 // destino, isso precisa ser conferido no painel do Leadster.
 
 export const WHATSAPP_POOL = [
-  // Marketplace usa o canal proprio, separado do de redes sociais.
-  { numero: '5511926471049', peso: 1 }, // FJ "Canal Mercado Livre"
-
-  // ---------------------------------------------------------------------
-  // HISTORICO - ler antes de acrescentar numero.
-  //
-  // 2026-09-17: volta para o canal de marketplace. A separacao e por
-  //   PRODUTO: marketplace (ML e Shopee) neste numero; redes sociais
-  //   (LP do Instagram) nos canais 8630 e 8173. Nao misturar.
-  // 2026-09-16: tinha ido para o 8630 junto com as outras, revertido.
-  // 2026-09-01: saiam 5511972021019 e 5511912611616, ambos ARQUIVADOS e
-  //   DESCONECTADOS no Digisac; 100% de quem preenchia o formulario caia
-  //   no vazio.
-  //
-  // ANTES DE INCLUIR OU REATIVAR QUALQUER UM: conferir que esta conectado,
-  // nao arquivado E nao banido. Em 2026-09-16 a API do FJ reportou
-  // "connected" para um numero ja banido: o painel nao denuncia banimento.
-  // ---------------------------------------------------------------------
+  // 2026-10-14: 1049 (Canal Mercado Livre) BANIDO. Divisao do dono:
+  // redes sociais = Carla, Ellen, Vitoria; marketplace = Gabriela.
+  { numero: '5511926888022', peso: 1 }, // FJ "Gabriela"
+  // A API do FJ nao denuncia banimento: so teste de envio real prova que o
+  // numero esta vivo. Historico completo de trocas no repo landing-amaral-ig.
 ];
 
 // ---------------------------------------------------------------------------
@@ -50,7 +37,7 @@ export const ASSUNTO = 'Quero recuperar minha conta do Mercado Livre';
 // sorteio real montam a mensagem no cliente, via montarLink().
 export const MENSAGEM_INICIAL = `${ORIGENS.site.tag} - ${ASSUNTO}`;
 
-const CHAVE_STICKY = 'ab_ml_wpp_v4';
+const CHAVE_STICKY = 'ab_ml_wpp_v5';
 
 export function escolherNumero() {
   try {
