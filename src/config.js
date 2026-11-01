@@ -54,19 +54,22 @@ export function escolherNumero() {
   return escolhido;
 }
 
-export function montarMensagem(extra) {
-  const tag = detectarTag();
+export function montarMensagem(extra, comCodigo = true) {
+  const tag = detectarTag(comCodigo);
   return `${tag} - ${extra || ASSUNTO}`;
 }
 
-export function montarLink(numero, extra) {
-  return `https://wa.me/${numero}?text=${encodeURIComponent(montarMensagem(extra))}`;
+export function montarLink(numero, extra, comCodigo = true) {
+  return `https://wa.me/${numero}?text=${encodeURIComponent(montarMensagem(extra, comCodigo))}`;
 }
 
 // Link padrao do HTML pre-renderizado (o prerender roda sem localStorage).
 // E FUNCAO, nao const: a mensagem depende da origem, e a origem so e conhecida
 // na hora do render. Como const, seria congelada no import e as tres paginas
 // sairiam com a mesma tag.
+// Sem o codigo do video: igual ao HTML pre-renderizado. Se o estado inicial ja
+// viesse com o codigo, o setHref do useEffect daria o mesmo valor, o React nao
+// re-renderizaria e o link do HTML (so #Youtube) ficaria valendo.
 export function linkPadrao() {
-  return montarLink(WHATSAPP_POOL[0].numero);
+  return montarLink(WHATSAPP_POOL[0].numero, undefined, false);
 }

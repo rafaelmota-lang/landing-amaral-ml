@@ -24,11 +24,11 @@ export function detectarOrigem() {
   return 'site';
 }
 
-export function detectarTag() {
+export function detectarTag(comCodigo = true) {
   const origem = detectarOrigem();
   const tag = (ORIGENS[origem] || ORIGENS.site).tag;
   // O codigo do video so existe no navegador; o prerender mantem #Youtube.
-  if (origem === 'youtube' && typeof location !== 'undefined') {
+  if (comCodigo && origem === 'youtube' && typeof location !== 'undefined') {
     const video = new URLSearchParams(location.search).get('v');
     if (video && /^[a-zA-Z0-9]{1,12}$/.test(video)) return `${tag} ${video}`;
   }
