@@ -23,3 +23,14 @@ export function detectarOrigem() {
   } catch (e) {}
   return 'site';
 }
+
+export function detectarTag() {
+  const origem = detectarOrigem();
+  const tag = (ORIGENS[origem] || ORIGENS.site).tag;
+  // O codigo do video so existe no navegador; o prerender mantem #Youtube.
+  if (origem === 'youtube' && typeof location !== 'undefined') {
+    const video = new URLSearchParams(location.search).get('v');
+    if (video && /^[a-zA-Z0-9]{1,12}$/.test(video)) return `${tag} ${video}`;
+  }
+  return tag;
+}

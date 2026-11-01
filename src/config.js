@@ -29,7 +29,7 @@ export const WHATSAPP_POOL = [
 // escolhe a porta de entrada. O coletor digisac-meta-capi nao cobre esse lado.
 // ---------------------------------------------------------------------------
 
-import { ORIGENS, detectarOrigem } from './origem.js';
+import { ORIGENS, detectarTag } from './origem.js';
 
 export const ASSUNTO = 'Quero recuperar minha conta do Mercado Livre';
 
@@ -55,8 +55,7 @@ export function escolherNumero() {
 }
 
 export function montarMensagem(extra) {
-  const origem = detectarOrigem();
-  const tag = (ORIGENS[origem] || ORIGENS.site).tag;
+  const tag = detectarTag();
   return `${tag} - ${extra || ASSUNTO}`;
 }
 
